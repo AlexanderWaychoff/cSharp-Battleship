@@ -8,6 +8,7 @@ namespace Battleship
 {
     class ShipPlacementBoard : Board
     {
+        Ships destroyer = new Ships("Destroyer", 2);
         public void shipPlacementBoard()
         {
 

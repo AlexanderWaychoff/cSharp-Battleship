@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    class Program
+    class Ships
     {
-        static void Main(string[] args)
+        private string name;
+        private int size;
+        public Ships(string name, int size)
         {
-            SetUpShips setUp = new SetUpShips();
-            setUp.setUpShips();
+            this.name = name;
+            this.size = size;
         }
     }
 }
