@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    class Board
+    public class Board
     {
         List<List<string>> gameBoard = new List<List<string>>();
         private int loopValue;
-        public void board()
+        public Board()
         {
-
+            this.boardAssembly();
         }
-        public List<List<string>> arrayBoard()
+        public List<List<string>> boardAssembly()
         {
-            //List<List<string>> board = new List<List<string>>();
             List<string> alphaChar = new List<string>() { "//", "A|", "B|", "C|", "D|", "E|", "F|", "G|", "H|", "I|", "J|" };
             List<string> fillBoard = new List<string>(); //{ "~", "~", "~", "~", "~", "~", "~", "~", "~", "~"};
             gameBoard.Add(alphaChar);
@@ -31,7 +30,6 @@ namespace Battleship
                 }
                 fillBoard = new List<string>();
             } 
-            Console.ReadKey();
             return gameBoard;
         }
         public List<List<string>> DisplayBoard()
@@ -40,10 +38,23 @@ namespace Battleship
             {
                 for (int j = 0; j <= 10; j++)
                 {
+                    if (gameBoard[j][i] == "~|")
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                    }
+                    else if (gameBoard[j][i] == "//")
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    }
                     Console.Write(gameBoard[j][i]);
                 }
                 Console.WriteLine();
             }
+            Console.ResetColor();
             return gameBoard;
         }
     }

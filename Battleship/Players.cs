@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    class Players
+    public class Players
     {
         AttackBoard attackBoard = new AttackBoard();
         ShipPlacementBoard shipPlacementBoard = new ShipPlacementBoard();
@@ -18,7 +18,7 @@ namespace Battleship
         private bool checkCorrectInput = false;
         public void players()
         {
-
+            
         }
         public void placeDestroyer()
         {
