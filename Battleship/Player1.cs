@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    class Program
+    class Player1 : Players
     {
-        static void Main(string[] args)
+        public void player1 ()
         {
-            Board board = new Board();
-            board.arrayBoard();
+
         }
     }
 }

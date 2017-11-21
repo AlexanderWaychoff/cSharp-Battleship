@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    class Board11
+    class Board
     {
         List<List<string>> gameBoard = new List<List<string>>();
         private int loopValue;
@@ -30,26 +30,12 @@ namespace Battleship
                     gameBoard[i].Add("~|");
                 }
                 fillBoard = new List<string>();
-            }
-            //for(int i = 0; i <= 10; i++)
-            //{
-            //foreach (var item in gameBoard[0])
-            //{
-            //        Console.Write(item);
-            //        for (int i = 1; i <= 10; i++)
-            //    {
-
-
-            //            Console.Write(gameBoard[i]);
-
-            //        if(i == 10)
-            //        {
-            //            Console.Write("\n");
-            //        }
-            //    }
-            //}
-            //}
-            //DisplayBoard(gameBoard);
+            } 
+            Console.ReadKey();
+            return gameBoard;
+        }
+        public List<List<string>> DisplayBoard()
+        {
             for (int i = 0; i <= 10; i++)
             {
                 for (int j = 0; j <= 10; j++)
@@ -58,19 +44,7 @@ namespace Battleship
                 }
                 Console.WriteLine();
             }
-            Console.ReadKey();
             return gameBoard;
         }
-        //public void DisplayBoard<T>(T[,] gameBoard)
-        //{            
-        //    for (int i = 0; i < gameBoard.GetLength(0); i++)
-        //    {
-        //        for (int j = 0; j < gameBoard.GetLength(1); j++)
-        //        {
-        //            Console.Write(gameBoard[i, j] + "\t");
-        //        }
-        //        Console.WriteLine();
-        //    }
-        //}
     }
 }
