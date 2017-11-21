@@ -9,6 +9,7 @@ namespace Battleship
     class Board11
     {
         List<List<string>> gameBoard = new List<List<string>>();
+        private int loopValue;
         public void board()
         {
 
@@ -22,11 +23,13 @@ namespace Battleship
             for (int i = 1; i <= 10; i++)
             {
                 gameBoard.Add(fillBoard);
-                gameBoard[i].Add(i.ToString());
+                loopValue = i;
+                gameBoard[i].Add(i.ToString() + ".");
                 for (int j = 1; j <= 10; j++)
                 {
-                    gameBoard[i].Add("~");
+                    gameBoard[i].Add("~|");
                 }
+                fillBoard = new List<string>();
             }
             //for(int i = 0; i <= 10; i++)
             //{
