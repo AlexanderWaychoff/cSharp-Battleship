@@ -10,6 +10,8 @@ namespace Battleship
     {
         static void Main(string[] args)
         {
+            Board11 board = new Board11();
+            board.arrayBoard();
         }
     }
 }
